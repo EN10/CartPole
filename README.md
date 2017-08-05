@@ -1,15 +1,17 @@
-pip install gym
+## Install
 
-sudo apt install xvfb
+	pip install gym
 
-sudo apt install python-opengl
+	sudo apt install xvfb
 
-pip install jupyter
+	sudo apt install python-opengl
 
-xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook
+	pip install jupyter
+
+	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook
 
 ref:
 https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
 
-whereis jupyter
-export PATH=$PATH:~/.local/bin
+	whereis jupyter
+	export PATH=$PATH:~/.local/bin
