@@ -4,11 +4,13 @@
 	sudo apt install python-opengl
 
 CLI
+
 	sudo apt install xvfb
 	pip install jupyter
 	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook
 
 MP4
+
 	sudo apt install ffmpeg
 	xvfb-run -s "-screen 0 1024x768x24" python Record.py
 
