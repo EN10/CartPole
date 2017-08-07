@@ -1,4 +1,5 @@
 https://gym.openai.com/docs  
+https://github.com/openai/gym/wiki/CartPole-v0
 
 ## Install
 
