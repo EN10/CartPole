@@ -1,9 +1,3 @@
-"""
-__name__   = predict.py
-__author__ = Yash Patel
-__description__ = Full prediction code of OpenAI Cartpole environment using Keras
-"""
-
 import gym
 import numpy as np
 from keras.models import Sequential
@@ -44,21 +38,7 @@ def gather_data(env):
 
 def create_model():
 	model = Sequential()
-	model.add(Dense(128, input_shape=(4,), activation="relu"))
-	model.add(Dropout(0.6))
-
-	model.add(Dense(256, activation="relu"))
-	model.add(Dropout(0.6))
-
-	model.add(Dense(512, activation="relu"))
-	model.add(Dropout(0.6))
-
-	model.add(Dense(256, activation="relu"))
-	model.add(Dropout(0.6))
-
-	model.add(Dense(128, activation="relu"))
-	model.add(Dropout(0.6))
-	model.add(Dense(2, activation="softmax"))
+	model.add(Dense(2, input_shape=(4,), activation="softmax"))
 
 	model.compile(
 		loss="categorical_crossentropy",
