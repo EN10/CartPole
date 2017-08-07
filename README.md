@@ -17,6 +17,10 @@ MP4
 	sudo apt install ffmpeg
 	xvfb-run -s "-screen 0 1024x768x24" python Record.py
 
+Tensorflow
+
+	pip install tensorflow 
+
 Ref:  
 
 https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
