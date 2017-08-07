@@ -23,7 +23,7 @@ Tensorflow
 
 Performance
 
-https://github.com/lakshayg/tensorflow-build
+https://github.com/EN10/TensorFlow-For-Poets/blob/master/tensorflow-1.2.1-cp27-none-linux_x86_64.whl
 
 Ref:  
 
