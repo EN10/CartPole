@@ -17,7 +17,8 @@ MP4
 	sudo apt install ffmpeg
 	xvfb-run -s "-screen 0 1024x768x24" python Record.py
 
-Ref:
+Ref:  
+
 https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
 
 Missing jupyter:
@@ -27,4 +28,5 @@ Missing jupyter:
 
 RL Example:
 
+https://medium.com/@yashpatel_86510/reinforcement-learning-w-keras-openai-698add10b4eb
 https://gist.github.com/yashpatel5400/2e481657f247f0695200e8ca92d4b5df#file-cartpole-py
