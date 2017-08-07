@@ -21,6 +21,10 @@ Tensorflow
 
 	pip install tensorflow 
 
+Performance
+
+https://github.com/lakshayg/tensorflow-build
+
 Ref:  
 
 https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
