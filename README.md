@@ -1,3 +1,5 @@
+https://gym.openai.com/docs  
+
 ## Install
 
 	pip install gym
