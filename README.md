@@ -6,16 +6,20 @@ https://github.com/openai/gym/wiki/CartPole-v0
 	pip install gym
 	sudo apt install python-opengl
 
-CLI
+Render jupyter:  
 
 	sudo apt install xvfb
 	pip install jupyter
-	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook
+	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook Render-matplotlib.ipynb  
 
-MP4
+Render to MP4:  
 
 	sudo apt install ffmpeg
-	xvfb-run -s "-screen 0 1024x768x24" python Record.py
+	xvfb-run -s "-screen 0 1024x768x24" python RenderToMP4.py
+
+NoRender.py  
+
+Simple RL.py  
 
 Tensorflow
 
