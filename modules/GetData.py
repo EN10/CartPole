@@ -1,6 +1,5 @@
-import gym
+def GetData(env):
 import numpy as np
-env = gym.make('CartPole-v0')
 
 trainingX, trainingY = [], []
 scores = []
@@ -28,3 +27,4 @@ for i_episode in range(10000):
         
 trainingX, trainingY = np.array(trainingX), np.array(trainingY)
 print(np.mean(scores))
+return trainingX, trainingY

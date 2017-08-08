@@ -8,7 +8,7 @@ model.fit(trainingX, trainingY, epochs=5)
 	
 scores = []
 
-for _ in range(50) #trials
+for _ in range(50): #trials
 	observation = env.reset()
 	score = 0
         for step in range(500): #sim_steps
