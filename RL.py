@@ -1,11 +1,11 @@
 def GetData(env):
 	trainingX, trainingY = [], []
 	scores = []                                                                                                                                       
-        for i_episode in range(10000):
+        for i_episode in range(10000): #trials 
         	observation = env.reset()                                                                                                             
         	score = 0                                                                                                                             
         	training_sampleX, training_sampleY = [], []
-                for t in range(500):
+                for t in range(500): #sim_steps 
                         action = env.action_space.sample()
                         one_hot_action = np.zeros(2)
                         one_hot_action[action] = 1
