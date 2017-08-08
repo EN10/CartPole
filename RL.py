@@ -16,7 +16,7 @@ def gather_data(env):
 		training_sampleX, training_sampleY = [], []
 		for step in range(sim_steps):
 			# action corresponds to the previous observation so record before step
-			action = np.random.randint(0, 2)
+			action = env.action_space.sample()
 			one_hot_action = np.zeros(2)
 			one_hot_action[action] = 1
 			training_sampleX.append(observation)
