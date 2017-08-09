@@ -4,11 +4,13 @@ https://github.com/openai/gym/wiki/CartPole-v0
 ## Install
 
 	pip install gym
-	sudo apt install python-opengl
 
-**Render jupyter:**  
+**Render Requirements:**
 
 	sudo apt install xvfb
+	sudo apt install python-opengl
+
+**Render to jupyter:**  
 	pip install jupyter
 	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook Render-matplotlib.ipynb  
 
@@ -23,8 +25,9 @@ Gym NoRender.py `print(observation)`
 
 	pip install tensorflow 
 
-**Keras**
-
+**Keras**  
+Needed on C9: `sudo apt install python-dev`
+	
 	pip install keras
 
 Simple RL.py `GetData() CreateModel() predict()` 

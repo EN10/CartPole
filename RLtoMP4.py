@@ -44,13 +44,13 @@ import gym
 import numpy as np
 
 def predict():
-        from gym import wrappers
         env = gym.make("CartPole-v0")
-        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')
-
         trainingX, trainingY = GetData(env)
         model = CreateModel()
         model.fit(trainingX, trainingY, epochs=5)
+
+        from gym import wrappers
+        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')
 
         scores = []
         for _ in range(50): #trials
