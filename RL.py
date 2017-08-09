@@ -29,7 +29,7 @@ def GetData(env):
 from keras.models import Sequential
 from keras.layers import Dense
 
-def NN():
+def CreateModel():
 	model = Sequential()
 	model.add(Dense(2, input_shape=(4,), activation="softmax"))
 
@@ -46,7 +46,7 @@ def predict():
         env = gym.make("CartPole-v0")
         trainingX, trainingY = GetData(env)
 
-        model = NN()
+        model = CreateModel()
         model.fit(trainingX, trainingY, epochs=5)
 
         scores = []
