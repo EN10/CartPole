@@ -6,26 +6,32 @@ https://github.com/openai/gym/wiki/CartPole-v0
 	pip install gym
 	sudo apt install python-opengl
 
-Render jupyter:  
+**Render jupyter:**  
 
 	sudo apt install xvfb
 	pip install jupyter
 	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook Render-matplotlib.ipynb  
 
-Render to MP4:  
+**Render to MP4:**  
 
 	sudo apt install ffmpeg
 	xvfb-run -s "-screen 0 1024x768x24" python RenderToMP4.py
 
-NoRender.py  
+Gym NoRender.py `print(observation)` 
 
-Simple RL.py  
-
-Tensorflow
+**Tensorflow**
 
 	pip install tensorflow 
 
-Performance
+**Keras**
+
+	pip install keras
+
+Simple RL.py `GetData() CreateModel() predict()` 
+
+Visualise RLtoMP4.py `wrappers.Monitor ...`
+
+**Performance**
 
 https://github.com/EN10/TensorFlow-For-Poets/blob/master/tensorflow-1.2.1-cp27-none-linux_x86_64.whl
 
