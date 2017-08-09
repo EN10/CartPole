@@ -33,20 +33,20 @@ Needed on C9: `sudo apt install python-dev`
 
 Visualise RLtoMP4.py `wrappers.Monitor ...`
 
-**Performance**
-
-https://github.com/EN10/TensorFlow-For-Poets/blob/master/tensorflow-1.2.1-cp27-none-linux_x86_64.whl
-
-Ref:  
-
-https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
-
-Missing jupyter:
-
-	whereis jupyter
-	export PATH=$PATH:~/.local/bin
-
-RL Example:
+**RL Example:**
 
 https://medium.com/@yashpatel_86510/reinforcement-learning-w-keras-openai-698add10b4eb
 https://gist.github.com/yashpatel5400/2e481657f247f0695200e8ca92d4b5df#file-cartpole-py
+
+**Gym on Server:**  
+
+https://stackoverflow.com/questions/40195740/how-to-run-openai-gym-render-over-a-server
+
+**Missing jupyter:**
+
+	whereis jupyter
+	export PATH=$PATH:~/.local/bin
+	
+**Performance**
+
+https://github.com/EN10/TensorFlow-For-Poets/commits/master/tensorflow-1.2.1-cp27-none-linux_x86_64.whl 
