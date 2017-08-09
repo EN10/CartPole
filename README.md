@@ -11,6 +11,7 @@ https://github.com/openai/gym/wiki/CartPole-v0
 	sudo apt install python-opengl
 
 **Render to jupyter:**  
+
 	pip install jupyter
 	xvfb-run -s "-screen 0 1024x768x24" jupyter-notebook Render-matplotlib.ipynb  
 
