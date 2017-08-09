@@ -49,15 +49,15 @@ def predict():
         model = CreateModel()
         model.fit(trainingX, trainingY, epochs=5)
 
-        from gym import wrappers
-        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')
+        from gym import wrappers                                        # Output MP4
+        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')       # Output MP4
 
         scores = []
         for _ in range(50): #trials
                 observation = env.reset()
                 score = 0
                 for step in range(500): #sim_steps
-                        env.render()
+                        env.render()                                    # Output MP4
                         action = np.argmax(model.predict(observation.reshape(1,4)))
                         observation, reward, done, _ = env.step(action)
                         score += reward
