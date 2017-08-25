@@ -33,12 +33,15 @@ Needed on C9: `sudo apt install python-dev`
 
 Visualise RLtoMP4.py `wrappers.Monitor ...`
 
+	xvfb-run -s "-screen 0 600x400x24" python RLtoMP4.py
+
 **RL Example:**
 
 https://medium.com/@yashpatel_86510/reinforcement-learning-w-keras-openai-698add10b4eb
 https://gist.github.com/yashpatel5400/2e481657f247f0695200e8ca92d4b5df#file-cartpole-py
 
-**DQN Example:**
+**DQN Example:**  
+
 https://keon.io/deep-q-learning
 
 **Gym on Server:**  

@@ -1,3 +1,31 @@
+import gym
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy as np
+
+def Predict():
+        env = gym.make("CartPole-v0")
+        trainingX, trainingY = GetData(env)
+        model = CreateModel()
+        model.fit(trainingX, trainingY, epochs=5)
+
+        from gym import wrappers                                        # Output MP4
+        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-0')       # Output MP4
+
+        scores = []
+        for _ in range(50): #trials
+                observation = env.reset()
+                score = 0
+                for step in range(500): #sim_steps
+                        env.render()                                    # Output MP4
+                        action = np.argmax(model.predict(observation.reshape(1,4)))
+                        observation, reward, done, _ = env.step(action)
+                        score += reward
+                        if done:
+                                break
+                scores.append(score)
+        print(np.mean(scores))
+
 def GetData(env):
         trainingX, trainingY = [], []
         scores = []
@@ -27,9 +55,6 @@ def GetData(env):
         print(np.mean(scores))
         return trainingX, trainingY
 
-from keras.models import Sequential
-from keras.layers import Dense
-
 def CreateModel():
         model = Sequential()
         model.add(Dense(2, input_shape=(4,), activation="softmax"))
@@ -39,32 +64,6 @@ def CreateModel():
                 optimizer="adam",
                 metrics=["accuracy"])
         return model
-
-import gym
-import numpy as np
-
-def predict():
-        env = gym.make("CartPole-v0")
-        trainingX, trainingY = GetData(env)
-        model = CreateModel()
-        model.fit(trainingX, trainingY, epochs=5)
-
-        from gym import wrappers                                        # Output MP4
-        env = wrappers.Monitor(env, '/tmp/cartpole-experiment-1')       # Output MP4
-
-        scores = []
-        for _ in range(50): #trials
-                observation = env.reset()
-                score = 0
-                for step in range(500): #sim_steps
-                        env.render()                                    # Output MP4
-                        action = np.argmax(model.predict(observation.reshape(1,4)))
-                        observation, reward, done, _ = env.step(action)
-                        score += reward
-                        if done:
-                                break
-                scores.append(score)
-        print(np.mean(scores))
-
+        
 if __name__ == "__main__":
-        predict()
+        Predict()
